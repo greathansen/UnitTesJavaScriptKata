@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../libraries/jquery-ui-1.10.3/css/flick/jquery-ui-1.10.3.custom.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="../libraries/jquery-2.0.3.js"></script>
+    <script src="../libraries/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.js"></script>
+    <script>
+    $(function(){
+
+        $("#collapsibleContent").accordion({header:'h3',collapsible: true});
+
+    });
+
+    </script>
+</head>
+<body>
+
+    <div id="collapsibleContent">
+        <h3>Game Of Life</h3>
+        <div>
+        <p>      
+            Problem Description
+        </p>
+        This Kata is about calculating the next generation of Conway's game of life, given any starting position. See http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life for background.
+
+        You start with a two dimensional grid of cells, where each cell is either alive or dead. In this version of the problem, the grid is finite, and no life can exist off the edges. When calcuating the next generation of the grid, follow these rules:
+
+        <ul>
+            <li> 1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.</li>
+            <li> 2. Any live cell with more than three live neighbours dies, as if by overcrowding.</li>
+            <li> 3. Any live cell with two or three live neighbours lives on to the next generation.</li>
+            <li> 4. Any dead cell with exactly three live neighbours becomes a live cell.</li>
+        </ul>        
+    </div>
+
+    </div>
+</body>
+</html>
