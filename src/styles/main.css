@@ -1,4 +1,45 @@
+html, body
+{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  /**height: 100%;**/
+}
+
 ul
 {
     list-style-type: none;
 }
+
+.collapsibleContentBody{
+
+	width: 70%;
+		height: 350px;
+}
+
+
+.ui-tooltip {
+    max-width: 350px;
+ }
+
+ .listIframe {
+
+	width: 70%;
+
+}
+
+#header {
+
+	height: 50px;
+	background: black;
+	margin: 0;
+	display: block;
+	border: 0;
+}
+
+#collapsibleContentBody {
+
+	height: 2000px;
+}
+
+
