@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>QUnit - Binary Kata</title>
+        <link rel="stylesheet" href="../../libraries/qunit/qunit-1.12.0.css">
+        <style>
+        #qunit {
+            width: 60%;
+        }
+
+            iframe {
+            width: 100%;
+            }
+        #iframe {
+            width: 35%;
+            top: 0px;
+            position: absolute;
+            right: 5%;
+            height: 100%;
+                        }
+        </style>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <!--<iframe src="../../src/BinaryKata/binaryKata.html"></iframe>-->
+        </div>
+        <script src="../../libraries/jquery-2.0.3.js"></script>
+        <script src="../../libraries/qunit/qunit-1.12.0.js"></script>
+        <script src="../BinaryKata/binaryKataTest.js"></script>
+        <script src="../../src/BinaryKata/binaryKata.js"></script>
+        <div id="iframe"><iframe src="../../src/BinaryKata/binaryKata.html"></iframe></div>
+    </body>
+</html>
