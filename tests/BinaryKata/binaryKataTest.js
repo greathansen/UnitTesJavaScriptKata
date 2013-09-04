@@ -1,4 +1,17 @@
 $(document).ready(function () {
+   /* var url = "http://unittestjavascriptkata.azurewebsites.net/src/BinaryKata/binaryKata.html";
+
+    $.ajax({
+        url: url,
+
+        crossDomain: true,
+        datatype: 'html',
+        success: function (data) {
+
+            $("#qunit-fixture").append(data);
+        }
+    });
+    alert('cargando')*/
     BinaryConverter.Initialize(8);
 });
 
@@ -27,9 +40,10 @@ test("convert Binary to String using ConvertBitToString function", function () {
 /*
 test("convert a string to Binary using Do Magic click (set checkbox to true)", function () {
     
+
     $('#txtStringToConvert').val("a")
     $('#cbxBinay').click();
 
     alert($('#txtStringConverted').val());
     ok($('#txtStringConverted').val() == "01100001", "Passed! - convert 'a' to Binary.");
-});*/
+});   */

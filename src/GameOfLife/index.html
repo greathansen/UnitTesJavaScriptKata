@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script type="text/javascript" src="../../libraries/jquery-2.0.3.js"></script>
+        <script type="text/javascript" src="../../libraries/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.js"></script>
+        <script type="text/javascript" src="gameOfLife.js"></script>
+        <link rel="stylesheet" href="gameOfLife.css">
+    </head>
+    <body>
+        <h1>Game Of Life</h1>
+        <div class="kata">
+            <div class="kataDescription kataBase">
+                <h1>Rules</h1>
+                <div class="descriptionContainer">
+                       This Kata is about calculating the next generation of Conway's game of life, given any starting position.
+                       See http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life for background.
+                    <ul>
+                        <li>1. Any live cell with fewer than two live neighbours dies, as if caused by under-population.</li>
+                        <li>2. Any live cell with two or three live neighbours lives on to the next generation.</li>
+                        <li>3. Any live cell with more than three live neighbours dies, as if by overcrowding.</li>
+                        <li>4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="kataContent kataBase">
+                <div class="descriptionContainer">
+                    <button id="btnNextGeneration">Next Generation</button>
+                    <button id="btnClear">Clear</button>
+                    <label>Geration:</label><label id="lblGenerationNumber"></label>
+                </div>
+            </div>
+            <div class="kataContent2 kataBase">
+                <div>
+                    <table id="neighbourHood">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

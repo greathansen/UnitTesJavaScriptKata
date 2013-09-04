@@ -1,45 +1,91 @@
-html, body
-{
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  /**height: 100%;**/
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    /**height: 100%;**/
 }
 
-ul
-{
+body {
+    background: #ddd;
+    font: normal 13px Roboto,arial,sans-serif;
+}
+
+ul {
     list-style-type: none;
 }
 
-.collapsibleContentBody{
-
-	width: 70%;
-		height: 350px;
+.collapsibleContentBody {
+    width: 70%;
+    height: 350px;
 }
 
 
 .ui-tooltip {
     max-width: 350px;
- }
+}
 
- .listIframe {
-
-	width: 70%;
-
+.listIframe {
+    width: 70%;
 }
 
 #header {
-
-	height: 50px;
-	background: black;
-	margin: 0;
-	display: block;
-	border: 0;
+    height: 50px;
+    background: black;
+    margin: 0;
+    display: block;
+    border: 0;
 }
 
 #collapsibleContentBody {
-
-	height: 2000px;
+    height: 2000px;
 }
 
+iframe {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    height: 100%;
+    border: none;
+}
 
+.gitHubIcon {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    border: 4px;
+    z-index: 99;
+    width: 4%;
+}
+
+a.gitHubIcon:hover {
+    margin-top: 10px;
+}
+
+#gihubLogo {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Open Sans',sans-serif;
+    background-color: #f16304;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.banner {
+    position: absolute;
+    height: 40px;
+}
+
+::-webkit-scrollbar {
+
+    background: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background: #f18d00;
+}

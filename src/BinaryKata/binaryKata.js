@@ -1,24 +1,50 @@
 BinaryConverter = {}
 
 $(document).ready(function () {
-    BinaryConverter.Initialize(8);
+    BinaryConverter.Initialize(8, "http://unittestjavascriptkata.azurewebsites.net/BinaryKataService.svc");
 });
 
 BinaryConverter = {
-    Initialize: function (unicodePad) {
+
+    Initialize: function (unicodePad, url) {
         BinaryConverter.unicodePad = unicodePad;
+        BinaryConverter.WebServiceUrl = url;
+
+        $('#btnDoIt').click(function () {
+            var data = $('#txtStringToConvert').val();
+
+            if ($('#cbxUseWebService')[0].checked) {
+                BinaryConverter.ConvertUsingWebService('/ConvertBitToString', data)
+            }
+            else {
+                $('#txtStringConverted').val(BinaryConverter.ConvertBitToString(data));
+            }
+        });
 
         $('#cbxBinay').click(function () {
             $('#btnDoIt').unbind();
 
             if ($(this)[0].checked) {
                 $('#btnDoIt').click(function () {
-                    //validation
-                    $('#txtStringConverted').val(BinaryConverter.ConvertStringToBits($('#txtStringToConvert').val()));
+                    var data = $('#txtStringToConvert').val();
+
+                    if ($('#cbxUseWebService')[0].checked) {
+                        BinaryConverter.ConvertUsingWebService('/ConvertStringToBits', data)
+                    }
+                    else {
+                        $('#txtStringConverted').val(BinaryConverter.ConvertStringToBits(data));
+                    }
                 });
             } else {
                 $('#btnDoIt').click(function () {
-                    $('#txtStringConverted').val(BinaryConverter.ConvertBitToString($('#txtStringToConvert').val()));
+                    var data = $('#txtStringToConvert').val();
+
+                    if ($('#cbxUseWebService')[0].checked) {
+                        BinaryConverter.ConvertUsingWebService('/ConvertBitToString', data)
+                    }
+                    else {
+                        $('#txtStringConverted').val(BinaryConverter.ConvertBitToString(data));
+                    }
                 });
             }
         });
@@ -79,5 +105,28 @@ BinaryConverter = {
 
     ConvertBitToChar: function (bit, weight) {
         return bit == 0 ? 0 : weight;
+    },
+
+    ConvertUsingWebService: function (methodName, data) {
+
+        var Url = BinaryConverter.WebServiceUrl + methodName + '/' + data
+
+        /* $.ajax({
+        success: function (convertedValue) { return convertedValue },
+        type: "POST",
+        dataType: "json",
+        url: Url + methodName + '/' + data,
+        error: function (exception) { alert('it was and error. ' + exception); }
+
+        });*/
+
+        $.getJSON(Url, {
+            tagmode: "any",
+            format: "json"
+        }).done(function (convertedValue) {
+            $('#txtStringConverted').val(convertedValue);
+
+        }).fail(function (exception) { alert('it was and error. ' + exception); });
+
     }
 }

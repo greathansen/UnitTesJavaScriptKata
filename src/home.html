@@ -5,83 +5,69 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Home</title>
         <link rel="stylesheet" href="../libraries/jquery-ui-1.10.3/css/flick/jquery-ui-1.10.3.custom.css">
-        <script src="../libraries/jquery-2.0.3.js"></script>
-        <script src="../libraries/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.js"></script>
+        <script type="text/javascript" src="../libraries/jquery-2.0.3.js"></script>
+        <script type="text/javascript" src="../libraries/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.js"></script>
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/navigation.css">
         <script>
-            $(function(){
+            $(function () {
+                var pull = $('#pull');
+                menu = $('nav ul');
+                menuHeight = menu.height();
             
-                $("#collapsibleContent").accordion({header:'h1',collapsible: true});
+                $(pull).click(function (e) {
+                    e.preventDefault();
+                    menu.slideToggle();
+                });
             
+                $('#BinaryKata').click(function () {
+            
+                    $('#ifContent').attr('src', './BinaryKata/binaryKata.html');
+            
+                });
+                $('#codingDojo').click(function () {
+            
+                     $('#ifContent').attr('src', './CodingDojoPresentation/index.html');
+            
+                });
+                $('#gameOfLife').click(function () {
+            
+                     $('#ifContent').attr('src', './gameOfLife/index.html');
+            
+                });
+            
+                $('a').click(function () {
+                    $('.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                });
             });
             
-            $(function() {  
-                var pull        = $('#pull');  
-                    menu        = $('nav ul');  
-                    menuHeight  = menu.height();  
-            
-                $(pull).on('click', function(e) {  
-                    e.preventDefault();  
-                    menu.slideToggle();  
-                });  
-            });  
-            
-            $(window).resize(function(){  
-                var w = $(window).width();  
-                if(w > 320 && menu.is(':hidden')) {  
-                    menu.removeAttr('style');  
-                }  
-            }); 
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
         </script>
 
     </head>
     <body>
         <nav id="navigationBar" class="clearfix">
+            <img class="banner" src="Images/logo_ACCEN.jpg" alt="#">
             <ul class="clearfix">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Coding Dojo</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Sign In</a></li>
-                <li><a href="#">Sign Up</a></li>
+                <li><a href="#" class="selected">Home</a></li>
+                <li><a id="codingDojo" href="#">Coding Dojo</a>
+                <li><a id="BinaryKata" href="#">Binary Kata</a></li>
+                <li><a id="gameOfLife" href="#">Game Of Life</a></li>
             </ul>
             <a href="#" id="pull">Menu</a>
         </nav>
+        <a class="gitHubIcon" href="https://github.com/greathansen/UnitTestJavaScriptKata" target="_blank" title="https://github.com/greathansen/UnitTestJavaScriptKata">
+            <img id="gihubLogo" src="Images/github.jpg" alt="#">
+        </a>
         <div class="content">
-
-            <div class="collapsibleContentBody">
-                <div id="collapsibleContent">
-                    <h1>Game Of Life</h1>
-                                            <!--<div>
-                                                <p>
-                                        Problem Description
-                                                </p>
-                                    This Kata is about calculating the next generation of Conway's game of life, given any starting position.
-                                                <br>See <a class="link" href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" alt="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Here<a> for background.
-                                    You start with a two dimensional grid of cells, where each cell is either alive or dead. In this version of the problem, the grid is finite, and no life can exist off the edges. When calcuating the next generation of the grid, follow these rules:
-                                                        <ul>
-                                                            <li> 1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.</li>
-                                                            <li> 2. Any live cell with more than three live neighbours dies, as if by overcrowding.</li>
-                                                            <li> 3. Any live cell with two or three live neighbours lives on to the next generation.</li>
-                                                            <li> 4. Any dead cell with exactly three live neighbours becomes a live cell.</li>
-                                                        </ul>
-                                            </div>-->
-                    <h1>Rock Paper Scissors Lizard Spock</h1>
-                    <div>
-            asdasdas
-                    </div>
-                    <h1>Binary, Why binary :(</h1>
-                    <div>
-                        This Kata is about converting binary data to a string. Also we have to convert an string to binary data.
-                        <ul>
-                            <li> 1. Any string should be converted to binary.</li>
-                            <li> 2. Any binary string should be converted to string.</li>
-
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
+            <iframe id="ifContent" src=""></iframe>
         </div>
+        <footer><span>>>>We love nice solutions!!!<<<</span></footer>
     </body>
 </html>

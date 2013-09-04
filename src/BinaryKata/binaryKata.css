@@ -1,0 +1,112 @@
+.kata {
+    position: relative;
+}
+
+.kataBase {
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+}
+
+.kataDescription {
+    width: 47%;
+    text-wrap: normal;
+}
+
+.kataContent {
+    width: 50%;
+    position: absolute;
+    left: 49%;
+    top: 0;
+}
+
+h1 {
+    text-align: center;
+     color:#f18d35;
+}
+
+body {
+    background: #ddd;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    
+}
+.descriptionContainer {
+    margin: 20px;
+}
+
+button {
+    
+    background: #f18d00;
+    border-radius: 0;
+   font-family: 'Open Sans',sans-serif;
+   border-style: none;
+   color: #fff;
+   padding: 5px;
+    
+}
+
+button:hover {
+    
+   
+    background: #f18d60;
+    cursor:pointer;
+}
+
+button:active {
+    
+    background: #f18d00;
+}
+/*
+.btn, button, a.btn, label.btn, *.btn, .btn-file
+{
+  color: #fff !important;
+  font-size: 12px !important;
+  border: none !important;
+  font-family: Arial, Sans-Serif;
+  text-shadow: none !important;
+  border-radius: 3px;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+  
+  -webkit-align-items: flex-start;
+  -webkit-appearance: none;
+  -webkit-background-clip: border-box;
+  -webkit-background-origin: padding-box;
+  -webkit-background-size: auto;
+  -webkit-box-shadow: none;
+  -webkit-writing-mode: horizontal-tb;
+  
+  background-image: none !important;
+  border-bottom-color: rgb(255, 255, 255);
+  border-radius: 0px;
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-collapse: collapse;
+  border: 0px solid #ffffff;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer !important;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  height: auto;
+  letter-spacing: normal;
+  line-height: 20px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  vertical-align: middle;
+  word-spacing: 0px;
+  zoom: 1;
+
+}
+    */
