@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>ATAG - Coding Dojo - August 2013</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+        </script>
+
+                    <!--[if lt IE 9]>
+                                            <script src="lib/js/html5shiv.js"></script>
+                                            <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h3>ATAG - TDD (Test Driven Divelopment)</h1>
+                        <div>
+                            <img src="../TDDPresentation/imgs/TddFlow.png" style=" max-height: none; max-width: none; background: none; border: none; box-shadow: none;" />
+                            <br>
+                        </div>
+                </section>
+
+                <section>
+                    <h1>What is Tdd?
+                    </h1>
+                    <br>
+                    <ul>
+                        <li>Test Driven Development is a process, an apporach to develop software.</li>
+                        <li>Consist in first make a test, make it's fail, and then create a peace of code that accomplish that test.</li>
+                        <li>Then you have to refactor the code to be according to the software development standarts.</li>
+                        <li>With this we have an automated test case.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Add a Test and Run Test
+                    </h1>
+                    <br>
+                    <div>
+                        In TDD you have firts to add a Test. Is will fail, there is no code that cover that test, but should have the minor steps for reproduce a user case.
+                        The test should be descriptive and clean. What does clean means... should contains the minor peace of code to test a user story or user case, and should not to add business logic.
+                    </div>
+                </section>
+                <section>
+                    <h1>Write some code
+                    </h1>
+                    <br>
+                    <div>
+                        Once the test is written, the new feature should be added, so we add some code to add the business logic
+                        The code will be not perfect and not the final, but the test should pass.
+                    </div>
+                </section>
+                <section>
+                    <h1>Refactor the Code
+                    </h1>
+                    <br>
+                    <div>
+                        We created a test and we added business logic. Now we have to clean the code and improve our code.
+                        and then we re run the test. The test shoul be pass (we dont have to add any code to the test).
+                        If the test fails, we have to review if we broke the functionality or if we miss something.
+                    </div>
+                </section>
+                <section>
+                    <h1>Repeat
+                    </h1>
+                    <br>
+                    <div>
+                        TDD is an iterative, so we have to do all the steps for each peace of code that we want to add.
+                    </div>
+                </section>
+                <section>
+                    <h1>Remember...Keep the test small.
+                    </h1>
+                </section>
+
+                <!-- this is the end :( -->
+                <section>
+                    <h1>Thanks!</h1>
+                    <p>
+                    This humble presentation was built using:
+                        <span><a href="https://github.com/hakimel/reveal.js/">reveal.js</a><br />
+                            <a href="http://slid.es/">slid.es = reveal.js(online editor)<a>
+                        </span>
+                        <br />
+                </section>
+            </div>
+        </div>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+
+
+
+            
+            
+            
+            
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+            
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+            
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+                    // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+            
+        </script>
+
+    </body>
+</html>

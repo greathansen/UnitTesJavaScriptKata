@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Home</title>
-        <link rel="stylesheet" href="../libraries/jquery-ui-1.10.3/css/flick/jquery-ui-1.10.3.custom.css">
-        <script type="text/javascript" src="../libraries/jquery-2.0.3.js"></script>
-        <script type="text/javascript" src="../libraries/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.js"></script>
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/navigation.css">
+        <link rel="stylesheet" href="libraries/jquery-ui-1.10.3/css/flick/jquery-ui-1.10.3.custom.css">
+        <script type="text/javascript" src="libraries/jquery-2.0.3.js"></script>
+        <script type="text/javascript" src="libraries/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.js"></script>
+        <link rel="stylesheet" href="src/styles/main.css">
+        <link rel="stylesheet" href="src/styles/navigation.css">
         <script>
             $(function () {
                 var pull = $('#pull');
@@ -22,17 +22,29 @@
             
                 $('#BinaryKata').click(function () {
             
-                    $('#ifContent').attr('src', './BinaryKata/binaryKata.html');
+                    $('#ifContent').attr('src', './src/BinaryKata/binaryKata.html');
             
                 });
                 $('#codingDojo').click(function () {
             
-                     $('#ifContent').attr('src', './CodingDojoPresentation/index.html');
+                     $('#ifContent').attr('src', './src/CodingDojoPresentation/index.html');
             
                 });
                 $('#gameOfLife').click(function () {
             
-                     $('#ifContent').attr('src', './gameOfLife/index.html');
+                     $('#ifContent').attr('src', './src/gameOfLife/index.html');
+            
+                });
+
+                 $('#tdd').click(function () {
+            
+                     $('#ifContent').attr('src', './src/TDDPresentation/index.html');
+            
+                });
+
+                $('#home').click(function () {
+            
+                     $('#ifContent').attr('src', 'index.html');
             
                 });
             
@@ -53,20 +65,22 @@
     </head>
     <body>
         <nav id="navigationBar" class="clearfix">
-            <img class="banner" src="Images/logo_ACCEN.jpg" alt="#">
+            <img class="banner" src="src/Images/logo_ACCEN.jpg" alt="#">
             <ul class="clearfix">
-                <li><a href="#" class="selected">Home</a></li>
+                <li><a id="home" href="#" class="selected">Home</a></li>
                 <li><a id="codingDojo" href="#">Coding Dojo</a>
+                <li><a id="tdd" href="#">TDD</a>
                 <li><a id="BinaryKata" href="#">Binary Kata</a></li>
                 <li><a id="gameOfLife" href="#">Game Of Life</a></li>
+                
             </ul>
             <a href="#" id="pull">Menu</a>
         </nav>
         <a class="gitHubIcon" href="https://github.com/greathansen/UnitTestJavaScriptKata" target="_blank" title="https://github.com/greathansen/UnitTestJavaScriptKata">
-            <img id="gihubLogo" src="Images/github.jpg" alt="#">
+            <img id="gihubLogo" src="src/Images/github.jpg" alt="#">
         </a>
         <div class="content">
-            <iframe id="ifContent" src=""></iframe>
+            <iframe id="ifContent" src="index.html"></iframe>
         </div>
         <footer><span>>>>We love nice solutions!!!<<<</span></footer>
     </body>
